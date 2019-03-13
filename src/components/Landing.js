@@ -1,12 +1,15 @@
 import React from 'react';
 import Pokelist from './Pokelist'
+import PokeDetail from './PokeDetail'
 
-const Landing = () => {
-  return (
-    <div>
-      <Pokelist />
-    </div>
-  )
+class Landing extends Component {
+  constructor(){
+    super()
+    this.state = {}
+  }
+  handleOnClick(id){
+    
+  }
 }
 
 export default Landing;
