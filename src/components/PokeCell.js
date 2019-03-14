@@ -1,11 +1,17 @@
-import React from 'react';
-import './styles/PokeCell.css';
-import sprite from '../assets/sprites.png'
+import React from "react";
+import sprite from "../assets/sprites.png";
+import "./styles/PokeCell.css";
 
-const PokeCell = ({ pokeClass }) =>{
+const PokeCell = ({ pokeClass, handleOnClick }) => {
   const { id, backgroundPosition } = pokeClass;
-  const style = { backgroundImage: `url(${sprite})`, backgroundPosition}
-  return <button className="poke-cell" style={style}></button>
-}
+  const style = { backgroundImage: `url(${sprite})`, backgroundPosition };
+  return (
+    <button
+      onClick={() => handleOnClick(id)}
+      className="poke-cell"
+      style={style}
+    />
+  );
+};
 
-export default PokeCell
+export default PokeCell;
